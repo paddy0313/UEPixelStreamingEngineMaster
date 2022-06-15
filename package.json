@@ -1,0 +1,66 @@
+{
+  "name": "engine",
+  "version": "1.0.0",
+  "description": "渲染平台管理端",
+  "main": "main.js",
+  "author": "laperlee",
+  "license": "MIT",
+  "scripts": {
+    "start": "chcp 65001 && electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.63",
+    "@electron-forge/maker-deb": "^6.0.0-beta.63",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "electron": "^16.0.7"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compressing": "^1.5.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "http": "0.0.1-security",
+    "http-proxy-middleware": "^2.0.1",
+    "log4js": "^6.4.1",
+    "md5-node": "^1.0.1",
+    "request": "^2.88.2",
+    "ws": "^8.4.2"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "name": "engine",
+        "packageManage": "npm",
+        "icon": "application/resource/favicon",
+        "asar": true
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "my_electron_app"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}

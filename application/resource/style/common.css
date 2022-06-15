@@ -1,0 +1,181 @@
+*{
+    box-sizing: border-box;
+    -webkit-user-select:none;
+    font-family: "Microsoft YaHei"
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    overflow: hidden;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.app{
+    /* background: url("./../bg.png"); */
+    /* background-size:cover; */
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 40px 1fr;
+}
+
+.app .topbar{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.app .topbar .tool{
+    display: flex;
+    align-items: center;
+}
+.app .topbar .tool .logo{
+    height: 20px;
+    width: 20px;
+}
+
+.app .topbar .tool .title{
+    color: #fff;
+    padding-left: 16px;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 600;
+}
+.app .topbar .tool .status{
+    margin-left: 16px;
+    width: 14px;
+    height: 14px;
+    display: block;
+    border-radius: 10px;
+    background-color: rgb(145, 145, 145);
+}
+
+.app .topbar .tool .active{
+    background-color: rgb(52, 195, 255);
+    box-shadow:0 0 5px 5px rgb(178, 232, 255);
+}
+
+.app .topbar .action{
+    display: flex;
+    align-items: center;
+    width: auto !important;
+}
+.app .topbar .action i{
+    margin-left: 23px;
+    width: 18px;
+    height: 18px;
+}
+
+
+
+.btn{
+    display: block !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    color: #fff !important;
+    text-align: center;
+}
+
+.drag{
+    -webkit-app-region: drag;
+}
+
+.btn-success{
+    border-width: 2px;
+    border-style: solid;
+    border-color: initial;
+    border-image: radial-gradient(100% 185.14% at 100% 100%, rgb(52, 195, 255) 0%, rgb(51, 142, 238) 100%) 5 / 2px / 0 stretch;
+    /* background-color: rgb(49, 159, 170) !important; */
+}
+
+.btn-success:hover{
+    box-shadow:0 0 18px #00ABF5;background-color:transparent;
+    /* background-color: rgb(60, 170, 190) !important; */
+}
+.btn-success:active{
+    background-color: rgb(49, 159, 170) !important;
+}
+
+.icon-s{
+    display: block;
+    width: 18px;
+    height: 18px;
+}
+
+.icon-m{
+    display: block;
+    width: 36px;
+    height: 36px;
+}
+
+.icon-b{
+    display: block;
+    width: 72px;
+    height: 72px;
+}
+
+.icon-m img{
+    width: 100%;
+    height: 100%;
+}
+
+.hidden{
+    display: none !important;
+}
+input[type=checkbox]{
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+}
+input[type=checkbox]:after
+{
+    box-sizing: border-box;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    content: "";
+    background-color:#091B28;
+    display: block;
+    visibility: visible;
+    border-radius: 2px;
+    border:1px solid rgba(255, 255, 255, 0.2);
+}
+
+input[type=checkbox]:checked:after
+{
+    box-sizing: border-box;
+    position:absolute;
+    padding: 2px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    content: "\2713";
+    font-size: 6px;
+    font-weight:bolder;
+    background-color:#00E7FF;
+    color: #fff;
+    display: inline-block;
+    visibility: visible;
+    border-radius: 2px;
+    line-height: 100%;
+    border:1px solid rgba(255, 255, 255, 0.2);
+}

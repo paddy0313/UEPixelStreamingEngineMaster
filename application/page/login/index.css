@@ -1,0 +1,113 @@
+
+.login{
+    width: 613px;
+    height: 591px;
+    margin-top: 3px;
+    margin: 0 auto;
+}
+.login .title{
+    width: 100%;
+    height: 78px;
+}
+.login .title .text{
+    margin-top: 8px;
+    width: 100%;
+    height: 33px;
+    line-height: 33px;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    color: #FFF;
+}
+
+
+.login .form{
+    margin-top: 32px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: rgb(32, 35, 55);
+    padding: 40px 96px 40px 96px;
+    display: flex;
+    flex-direction: column;
+}
+.form .row{
+    margin-bottom: 15px;
+}
+.form .row label{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}
+.form .row input{
+    display: block;
+    box-sizing: border-box;
+    margin-top: 8px;
+    height: 40px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px 16px 10px 16px;
+    color: #fff;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+    border-width: 2px;
+    border-color: rgba(0, 0, 0, 0);
+}
+.form .row input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+.form .row input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+.form .row input:focus-within{
+    border-width: 2px;
+    border-style: solid;
+    border-color: initial;
+    border-image: radial-gradient(100% 185.14% at 100% 100%, rgb(52, 195, 255) 0%, rgb(51, 142, 238) 100%) 5 / 2px / 0 stretch;
+}
+.form .select{
+    display: flex;
+    justify-content: space-between;
+}
+.form .select .checkbox{
+    height: 12px;
+    width: 12px;
+}
+.form .select .ssl{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.form .select label{
+    margin-left: 4px;
+    color: #fff;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    height: 20px;
+}
+
+.form .select .auto{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.form .action{
+    margin-top: 20px;
+}
+
+.form .action .btn{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    line-height: 44px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}

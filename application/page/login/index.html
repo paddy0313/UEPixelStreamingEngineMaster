@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>欢迎进入渲染平台管理端</title>
+    <link rel="stylesheet" href="./../../resource/style/common.css" type="text/css" />
+    <link rel="stylesheet" href="./index.css" type="text/css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="topbar">
+        <div class="tool drag">
+        </div>
+        <div class="action">
+          <i class="btn icon-s" id="close"><img src="./../../resource/icon/close.png" /></i>
+        </div>
+      </div>
+      <div class="login">
+        <div class="title">
+          <div class="text">渲染平台管理端</div>
+        </div>
+        <div class="form">
+          <div class="row sws">
+            <label>信令服务IP:</label>
+            <div><input id="swsip" type="text" value="" /></div>
+          </div>
+          <div class="row sws">
+            <label>信令服务端口:</label>
+            <div><input id="swsport" type="number" value="" /></div>
+          </div>
+          <div class="select sws">
+            <div class="ssl">
+              <div class="checkbox"><input type="checkbox" id="ssl" /></div>
+              <label>ssl</label>
+            </div>
+          </div>
+          <div class="row localsws hidden">
+            <label>拉流端端口:</label>
+            <div><input id="playerport" type="number" value="" /></div>
+          </div>
+          <div class="row localsws hidden">
+            <label>推流端端口:</label>
+            <div><input id="streamerport" type="number" value="" /></div>
+          </div>
+          <div class="row localsws hidden">
+            <label>主机端端口:</label>
+            <div><input id="manageport" type="number" value="" /></div>
+          </div>
+          <div class="row localsws hidden">
+            <label>管理端端口:</label>
+            <div><input id="adminpageport" type="number" value="" /></div>
+          </div>
+          <div class="row localsws hidden">
+            <label>管理端接口端口:</label>
+            <div><input id="adminswsport" type="number" value="" /></div>
+          </div>
+          <div class="row localsws hidden">
+            <label>管理账号:</label>
+            <div><input id="adminpagename" type="text" value="" /></div>
+          </div>
+          <div class="row localsws hidden">
+            <label>管理密码:</label>
+            <div><input id="adminpagepwd" type="text" value="" /></div>
+          </div>
+          <div class="select">
+            <div class="ssl">
+              <div class="checkbox"><input type="checkbox" id="localsws" /></div>
+              <label>本地信令</label>
+            </div>
+            <div class="auto">
+              <div class="checkbox"><input type="checkbox" id="authLogin" /></div>
+              <label>自动接入</label>
+            </div>
+          </div>
+          <div class="action">
+            <div class="btn btn-success login" id="login">接入</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./../../resource/js/common.js"></script>
+  <script src="./index.js"></script>
+</html>
