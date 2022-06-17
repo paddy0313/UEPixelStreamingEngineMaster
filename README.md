@@ -20,16 +20,34 @@ UE Pixel Streaming Engine Master
 该程序包含独立的信令服务程序(启动界面选择本地信令服务即可启动本地信令服务)
 
 
+## 虚幻引擎包植入说明
+将虚幻引擎打包以后(带上像素流插件进行打包)如图
+
+![image](https://user-images.githubusercontent.com/15978397/174209865-f2ba0258-7c3f-4f71-92c8-128627908e23.png)
+
+将包根目录下所有文件复制到UEPixelStreamingEngineMaster程序根目录下的render目录内
+并插件config.json文件
+该文件内容为
+```
+{
+  "exefile":"/SmartEarth/Binaries/Win64/SmartEarth.exe",
+  "param":["-RenderOffScreen"]
+}
+```
+exefile 为ue4运行程序相对render目录所在位置
+param 为启动的附带参数"-RenderOffScreen"未后台运行 具体参考虚幻引擎官方文档
 
 
 ## 程序界面介绍
 ### 登录界面介绍
 #### 远程信令服务模式
 ![image](https://user-images.githubusercontent.com/15978397/174204722-015a3229-4d0d-404c-b354-9c4bc94616fb.png)
+
 启动以后默认是连接远程信令服务地址和端口
 
 #### 本地信令服务模式
 当勾选本地信令服务的时候界面会变成
+
 ![image](https://user-images.githubusercontent.com/15978397/174205965-f5002287-2194-4ef5-a051-45e4dbf53f81.png)
 
 
