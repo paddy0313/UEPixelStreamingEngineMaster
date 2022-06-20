@@ -1,24 +1,18 @@
-var Socket = require("./core/socket");
-var Http = require("./core/http");
 let cache = require("./util/cache");
+let core = require("./core");
 
 class sws{
-    http;
-    socket;
+    core;
     start(option){
-        cache.setName(option.adminpagename);
-        cache.setPwd(option.adminpagepwd);
-        cache.setPlayer(option.playerport);
-        cache.setStreamer(option.streamerport);
-        cache.setManage(option.manageport);
-        cache.setAdmin(option.adminpageport,option.adminswsport);
-        this.socket=new Socket();
-        this.http = new Http();
+        cache.setName(option.adminname);
+        cache.setPwd(option.adminpwd);
+        cache.setPort(option.port);
+        this.core = new core();
+        return this.core.start();
     }
 
     close(){
-        this.http.close();
-        this.socket.close();
+        this.core.close();
     }
 }
 module.exports = sws;

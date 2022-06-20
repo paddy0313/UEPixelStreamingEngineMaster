@@ -12,7 +12,7 @@ class engine{
     }
     startSws(option){
         this.sws=new sws();
-        this.sws.start(option);
+        return this.sws.start(option);
     }
     close(){
         if(this.master){

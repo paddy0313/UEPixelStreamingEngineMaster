@@ -44,7 +44,7 @@ class ue4Mamage{
         if(!ue4Helper.runstatus()){
             ue4Helper.run();
             this.send("run",{
-                port:cache.getStreamer()
+                port:cache.getPort()
             })
         }
     }

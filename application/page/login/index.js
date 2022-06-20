@@ -33,13 +33,9 @@ window.onload = ()=>{
         };
         if(data.local){       //开启本地信令服务
             data.config = {
-                playerport:document.getElementById("playerport").value,
-                streamerport:document.getElementById("streamerport").value,
-                manageport:document.getElementById("manageport").value,
-                adminpageport:document.getElementById("adminpageport").value,
-                adminswsport:document.getElementById("adminswsport").value,
-                adminpagename:document.getElementById("adminpagename").value,
-                adminpagepwd:document.getElementById("adminpagepwd").value,
+                port:document.getElementById("port").value,
+                adminname:document.getElementById("adminname").value,
+                adminpwd:document.getElementById("adminpwd").value,
             }
         }else{
             data.config={
@@ -53,13 +49,9 @@ window.onload = ()=>{
 
     program.listen("init",(data)=>{
         if(data.local){
-            document.getElementById("playerport").value=data.config.playerport;
-            document.getElementById("streamerport").value=data.config.streamerport;
-            document.getElementById("manageport").value=data.config.manageport;
-            document.getElementById("adminpageport").value=data.config.adminpageport;
-            document.getElementById("adminswsport").value=data.config.adminswsport;
-            document.getElementById("adminpagename").value=data.config.adminpagename;
-            document.getElementById("adminpagepwd").value=data.config.adminpagepwd;
+            document.getElementById("port").value=data.config.port;
+            document.getElementById("adminname").value=data.config.adminname;
+            document.getElementById("adminpwd").value=data.config.adminpwd;
             document.getElementById("authLogin").checked=data.auth;
             document.getElementById("localsws").checked=true;
             if(data.auth){

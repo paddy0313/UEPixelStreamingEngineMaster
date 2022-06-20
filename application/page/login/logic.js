@@ -49,25 +49,13 @@ module.exports = {
         login:(window,request)=>{
             let param = {};
             if(request.data.local){
-                if(!request.data.config.playerport){
-                    throw new AlertException("请填写拉流端端口");
+                if(!request.data.config.port){
+                    throw new AlertException("请填写服务端口");
                 }
-                if(!request.data.config.streamerport){
-                    throw new AlertException("请填写推流端端口");
-                }
-                if(!request.data.config.manageport){
-                    throw new AlertException("请填写主机端端口");
-                }
-                if(!request.data.config.adminpageport){
-                    throw new AlertException("请填写管理端端口");
-                }
-                if(!request.data.config.adminswsport){
-                    throw new AlertException("请填写管理端接口端口");
-                }
-                if(!request.data.config.adminpagename){
+                if(!request.data.config.adminname){
                     throw new AlertException("请填写管理账号");
                 }
-                if(!request.data.config.adminpagepwd){
+                if(!request.data.config.adminpwd){
                     throw new AlertException("请填写管理密码");
                 }
                 param={

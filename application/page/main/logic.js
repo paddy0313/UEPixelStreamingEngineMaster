@@ -35,10 +35,12 @@ module.exports = {
         engine.log.setUnconnect(()=>{
             window.send("swsStatus",false);
         })
-        
         if(data.local){
-            engine.startSws(data.sws);
-            engine.startMaster("127.0.0.1",data.sws.manageport);
+            engine.startSws(data.sws).then(res=>{
+                console.log("启动管理端")
+                engine.startMaster("127.0.0.1",data.sws.port)
+            });
+            ;
         }else{
             engine.startMaster(data.sws.ip,data.sws.port);
         }

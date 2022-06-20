@@ -13,7 +13,7 @@ class swsServer{
     try;
     constructor(ip,port){
         this.ip=ip;
-        let url = "ws://"+ip+":"+port;
+        let url = "ws://"+ip+":"+port+"/manage";
         this.init(url);
     }
     init(url){

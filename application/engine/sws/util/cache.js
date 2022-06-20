@@ -1,21 +1,9 @@
-let player;
-let streamer;
-let manage;
-let admin;
+let port;
 let name;
 let pwd;
 module.exports={
-    setPlayer(value){
-        player=value;
-    },
-    setStreamer(value){
-        streamer=value;
-    },
-    setManage(value){
-        manage=value;
-    },
-    setAdmin(http,ws){
-        admin={http,ws};
+    setPort(value){
+        port=value;
     },
     setName(value){
         name=value;
@@ -24,17 +12,8 @@ module.exports={
         pwd=value;
     },
 
-    getPlayer(){
-        return player;
-    },
-    getStreamer(){
-        return streamer;
-    },
-    getManage(){
-        return manage;
-    },
-    getAdmin(){
-        return admin;
+    getPort(){
+        return port;
     },
     getName(){
         return name;

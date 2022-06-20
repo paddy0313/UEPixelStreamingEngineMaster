@@ -1,7 +1,6 @@
 const log = require("../util/log");
 let client = require("./helper/clientHelper");
 let ue4Helper = require("./helper/ue4Helper");
-let cache = require("./../util/cache");
 
 class Admin{
     closeTimeOut;
@@ -14,7 +13,7 @@ class Admin{
         client.setAdmin(this);
         this.send({
             type:"playerPort",
-            value:cache.getPlayer()
+            value:client.getPlayer()
         })
         this.sendPlayers();
         this.send({
