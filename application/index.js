@@ -22,7 +22,7 @@ module.exports = {
             {
                 label:"退出",
                 click:(win)=>{
-                    win.destroy()
+                    win.close()
                 }
             },
         ],
